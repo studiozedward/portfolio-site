@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pip-Token — Studio Zedward</title>
+<meta name="description" content="Pip-Token — A free VS Code extension that tracks Claude Code token usage with a retro Pip-Boy aesthetic.">
+<meta name="author" content="Studio Zedward">
+<link rel="canonical" href="https://studiozedward.com/pip-token.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Zedward">
+<meta property="og:title" content="Pip-Token — Studio Zedward">
+<meta property="og:description" content="Pip-Token — A free VS Code extension that tracks Claude Code token usage with a retro Pip-Boy aesthetic.">
+<meta property="og:url" content="https://studiozedward.com/pip-token.html">
+<meta property="og:image" content="https://studiozedward.com/images/og-default.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@StudioZedward">
+<meta name="twitter:title" content="Pip-Token — Studio Zedward">
+<meta name="twitter:description" content="Pip-Token — A free VS Code extension that tracks Claude Code token usage with a retro Pip-Boy aesthetic.">
+<meta name="twitter:image" content="https://studiozedward.com/images/og-default.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&display=swap">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/page.css">
+
+<script src="js/analytics.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pip-Token",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "VS Code",
+  "author": { "@type": "Person", "name": "Zedward" },
+  "url": "https://studiozedward.com/pip-token.html"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <div class="nav-dropdown">
+    <span tabindex="0">Projects</span>
+    <div class="nav-dropdown-menu">
+      <a href="pip-token.html">Pip-Token</a>
+      <a href="meowify.html">Meowify</a>
+      <a href="commbini.html">Commbini</a>
+    </div>
+  </div>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<canvas id="bg-canvas"></canvas>
+
+<main>
+  <h1>Pip-Token</h1>
+  <p class="subtitle">VS Code extension · 2026</p>
+
+  <div class="hero-image" style="background: #E86A5C;">[ project image ]</div>
+
+  <div class="body-text">
+    <p>Pip-Token is a free, open-source VS Code extension that tracks Claude Code token usage in real time, dressed in a Pip-Boy aesthetic borrowed from the Fallout series. The status bar displays your current session's token spend, daily totals, and rate-limit headroom — without leaving your editor.</p>
+
+    <p>Built for developers who live inside Claude Code and want a glanceable view of their usage without context-switching to a dashboard.</p>
+
+    <h2>Features</h2>
+    <p>[ placeholder for feature list ]</p>
+
+    <h2>Installation</h2>
+    <p>Available on the <a href="#">VS Code Marketplace</a>. Search for "Pip-Token" or install via the command palette.</p>
+  </div>
+</main>
+
+<div class="cta">
+  <p>Interested in working together?</p>
+  <a href="contact.html">Get in touch &rarr;</a>
+</div>
+
+<footer>
+  <span>&copy; 2026 Studio Zedward</span>
+  <a href="pip-token-privacy.html">Privacy Policy</a>
+</footer>
+
+<script type="module">
+  import { initDecorativeBlobs } from './js/decorative-blobs.js';
+  initDecorativeBlobs(document.getElementById('bg-canvas'), {
+    colors: ['#E86A5C', '#D94F3D', '#A83729', '#C44131', '#B83C2D'],
+    count: 5,
+  });
+</script>
+</body>
+</html>

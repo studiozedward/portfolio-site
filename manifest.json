@@ -1,0 +1,8 @@
+{
+  "name": "Studio Zedward",
+  "short_name": "SZ",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F5F0E8",
+  "theme_color": "#1a1a1a"
+}

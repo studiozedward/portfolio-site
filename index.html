@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Zedward</title>
+<meta name="description" content="Studio Zedward — Solo dev studio building open-source tools and consumer apps. Explore projects by Zedward.">
+<meta name="author" content="Studio Zedward">
+<link rel="canonical" href="https://studiozedward.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Zedward">
+<meta property="og:title" content="Studio Zedward">
+<meta property="og:description" content="Studio Zedward — Solo dev studio building open-source tools and consumer apps. Explore projects by Zedward.">
+<meta property="og:url" content="https://studiozedward.com/">
+<meta property="og:image" content="https://studiozedward.com/images/og-default.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@StudioZedward">
+<meta name="twitter:title" content="Studio Zedward">
+<meta name="twitter:description" content="Studio Zedward — Solo dev studio building open-source tools and consumer apps. Explore projects by Zedward.">
+<meta name="twitter:image" content="https://studiozedward.com/images/og-default.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&display=swap">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+
+<script src="js/analytics.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <div class="nav-dropdown">
+    <span tabindex="0">Projects</span>
+    <div class="nav-dropdown-menu">
+      <a href="pip-token.html">Pip-Token</a>
+      <a href="meowify.html">Meowify</a>
+      <a href="commbini.html">Commbini</a>
+    </div>
+  </div>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<canvas id="canvas"></canvas>
+<div id="title">Studio Zedward</div>
+<div id="tagline">Solo developer building consumer apps, tools for communications professionals, and whimsical side-projects.</div>
+<div id="tooltip"></div>
+<div id="hint">select a blob to explore a project</div>
+
+<button id="panel-toggle">Tweak</button>
+<div id="panel"></div>
+
+<script type="module">
+  import { initInteractiveBlobs } from './js/interactive-blobs.js';
+  initInteractiveBlobs(document.getElementById('canvas'));
+</script>
+</body>
+</html>

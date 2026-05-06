@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Studio Zedward</title>
+<meta name="description" content="About Studio Zedward — A London-based solo developer building open-source tools, consumer apps, and B2B software.">
+<meta name="author" content="Studio Zedward">
+<link rel="canonical" href="https://studiozedward.com/about.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Zedward">
+<meta property="og:title" content="About — Studio Zedward">
+<meta property="og:description" content="About Studio Zedward — A London-based solo developer building open-source tools, consumer apps, and B2B software.">
+<meta property="og:url" content="https://studiozedward.com/about.html">
+<meta property="og:image" content="https://studiozedward.com/images/og-default.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@StudioZedward">
+<meta name="twitter:title" content="About — Studio Zedward">
+<meta name="twitter:description" content="About Studio Zedward — A London-based solo developer building open-source tools, consumer apps, and B2B software.">
+<meta name="twitter:image" content="https://studiozedward.com/images/og-default.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&display=swap">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/page.css">
+
+<script src="js/analytics.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Zedward",
+  "url": "https://studiozedward.com",
+  "jobTitle": "Solo Developer",
+  "sameAs": ["https://x.com/StudioZedward"]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <div class="nav-dropdown">
+    <span tabindex="0">Projects</span>
+    <div class="nav-dropdown-menu">
+      <a href="pip-token.html">Pip-Token</a>
+      <a href="meowify.html">Meowify</a>
+      <a href="commbini.html">Commbini</a>
+    </div>
+  </div>
+  <a href="about.html" class="active">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<canvas id="bg-canvas"></canvas>
+
+<main>
+  <h1>About</h1>
+  <p class="subtitle">Studio Zedward</p>
+
+  <div class="hero-image" style="background: #F5C842; color: rgba(0,0,0,0.4);">[ portrait or studio image ]</div>
+
+  <div class="body-text">
+    <p>[ Placeholder body text. Replace with your actual about copy — who you are, what Studio Zedward stands for, what you build. ]</p>
+
+    <p>Studio Zedward is the creative identity of a London-based solo developer building open-source tools, consumer apps, and B2B software.</p>
+
+    <h2>What I build</h2>
+    <p>[ Placeholder — describe your areas of focus, the kinds of products you work on, and what unifies them. ]</p>
+
+    <h2>Get in touch</h2>
+    <p>For project enquiries, collaboration, or just a hello, see the <a href="contact.html">Contact</a> page.</p>
+  </div>
+</main>
+
+<footer>
+  <span>&copy; 2026 Studio Zedward</span>
+</footer>
+
+<script type="module">
+  import { initDecorativeBlobs } from './js/decorative-blobs.js';
+  initDecorativeBlobs(document.getElementById('bg-canvas'), {
+    colors: ['#F5C842', '#E8B832', '#D9A82A', '#F0CC50', '#E0BC42'],
+    count: 5,
+  });
+</script>
+</body>
+</html>

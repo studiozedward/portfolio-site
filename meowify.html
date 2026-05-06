@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meowify — Studio Zedward</title>
+<meta name="description" content="Meowify — A Studio Zedward project. Details coming soon.">
+<meta name="author" content="Studio Zedward">
+<link rel="canonical" href="https://studiozedward.com/meowify.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Zedward">
+<meta property="og:title" content="Meowify — Studio Zedward">
+<meta property="og:description" content="Meowify — A Studio Zedward project. Details coming soon.">
+<meta property="og:url" content="https://studiozedward.com/meowify.html">
+<meta property="og:image" content="https://studiozedward.com/images/og-default.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@StudioZedward">
+<meta name="twitter:title" content="Meowify — Studio Zedward">
+<meta name="twitter:description" content="Meowify — A Studio Zedward project. Details coming soon.">
+<meta name="twitter:image" content="https://studiozedward.com/images/og-default.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&display=swap">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/page.css">
+
+<script src="js/analytics.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Meowify",
+  "applicationCategory": "Application",
+  "author": { "@type": "Person", "name": "Zedward" },
+  "url": "https://studiozedward.com/meowify.html"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <div class="nav-dropdown">
+    <span tabindex="0">Projects</span>
+    <div class="nav-dropdown-menu">
+      <a href="pip-token.html">Pip-Token</a>
+      <a href="meowify.html">Meowify</a>
+      <a href="commbini.html">Commbini</a>
+    </div>
+  </div>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<canvas id="bg-canvas"></canvas>
+
+<main>
+  <h1>Meowify</h1>
+  <p class="subtitle">[ category ] · 2026</p>
+
+  <div class="hero-image" style="background: #D94F3D;">[ project image ]</div>
+
+  <div class="body-text">
+    <p>[ Placeholder body text. Replace with your Meowify project description. ]</p>
+
+    <h2>Features</h2>
+    <p>[ placeholder for feature list ]</p>
+
+    <h2>Get it</h2>
+    <p>[ placeholder for distribution link — App Store, web app URL, etc. ]</p>
+  </div>
+</main>
+
+<div class="cta">
+  <p>Interested in working together?</p>
+  <a href="contact.html">Get in touch &rarr;</a>
+</div>
+
+<footer>
+  <span>&copy; 2026 Studio Zedward</span>
+  <a href="meowify-privacy.html">Privacy Policy</a>
+</footer>
+
+<script type="module">
+  import { initDecorativeBlobs } from './js/decorative-blobs.js';
+  initDecorativeBlobs(document.getElementById('bg-canvas'), {
+    colors: ['#E86A5C', '#D94F3D', '#A83729', '#C44131', '#B83C2D'],
+    count: 5,
+  });
+</script>
+</body>
+</html>

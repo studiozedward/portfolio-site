@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Studio Zedward</title>
+<meta name="description" content="Contact Studio Zedward — Get in touch for project enquiries, collaboration, or a hello.">
+<meta name="author" content="Studio Zedward">
+<link rel="canonical" href="https://studiozedward.com/contact.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Zedward">
+<meta property="og:title" content="Contact — Studio Zedward">
+<meta property="og:description" content="Contact Studio Zedward — Get in touch for project enquiries, collaboration, or a hello.">
+<meta property="og:url" content="https://studiozedward.com/contact.html">
+<meta property="og:image" content="https://studiozedward.com/images/og-default.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@StudioZedward">
+<meta name="twitter:title" content="Contact — Studio Zedward">
+<meta name="twitter:description" content="Contact Studio Zedward — Get in touch for project enquiries, collaboration, or a hello.">
+<meta name="twitter:image" content="https://studiozedward.com/images/og-default.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&display=swap">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/page.css">
+<style>
+  .contact-form {
+    margin-top: 32px;
+  }
+  .contact-form label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 6px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    font-weight: 300;
+    background: transparent;
+    border: 1px solid rgba(26, 26, 26, 0.2);
+    border-radius: 2px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    transition: border-color 0.2s ease;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: rgba(26, 26, 26, 0.6);
+  }
+  .contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+  .contact-form button {
+    background: #1a1a1a;
+    color: #F5F0E8;
+    border: none;
+    padding: 12px 28px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: opacity 0.2s ease;
+  }
+  .contact-form button:hover {
+    opacity: 0.8;
+  }
+  .contact-fallback {
+    margin-top: 40px;
+    font-size: 13px;
+    opacity: 0.6;
+  }
+</style>
+
+<script src="js/analytics.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <div class="nav-dropdown">
+    <span tabindex="0">Projects</span>
+    <div class="nav-dropdown-menu">
+      <a href="pip-token.html">Pip-Token</a>
+      <a href="meowify.html">Meowify</a>
+      <a href="commbini.html">Commbini</a>
+    </div>
+  </div>
+  <a href="about.html">About</a>
+  <a href="contact.html" class="active">Contact</a>
+</nav>
+
+<canvas id="bg-canvas"></canvas>
+
+<main>
+  <h1>Contact</h1>
+  <p class="subtitle">Get in touch</p>
+
+  <div class="body-text">
+    <p>For project enquiries, collaboration, or just a hello — drop me a message below.</p>
+
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send message</button>
+    </form>
+
+    <p class="contact-fallback">Or email directly: hello@studiozedward.com</p>
+
+    <h2>Social</h2>
+    <p>X / Twitter — <a href="https://x.com/StudioZedward" target="_blank" rel="noopener">@StudioZedward</a></p>
+  </div>
+</main>
+
+<footer>
+  <span>&copy; 2026 Studio Zedward</span>
+</footer>
+
+<script type="module">
+  import { initDecorativeBlobs } from './js/decorative-blobs.js';
+  initDecorativeBlobs(document.getElementById('bg-canvas'), {
+    colors: ['#7A5230', '#8C6038', '#6B4528', '#A37A4F', '#5C3920'],
+    count: 5,
+  });
+</script>
+</body>
+</html>

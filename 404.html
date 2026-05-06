@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Studio Zedward</title>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400&display=swap">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/page.css">
+<style>
+  .error-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 28px;
+  }
+  .error-content h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(80px, 15vw, 200px);
+    letter-spacing: 0.06em;
+    margin-bottom: 0;
+    opacity: 0.9;
+  }
+  .error-content p {
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 32px;
+  }
+  .error-content a {
+    color: #1a1a1a;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .error-content a:hover { opacity: 0.7; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <div class="nav-dropdown">
+    <span tabindex="0">Projects</span>
+    <div class="nav-dropdown-menu">
+      <a href="pip-token.html">Pip-Token</a>
+      <a href="meowify.html">Meowify</a>
+      <a href="commbini.html">Commbini</a>
+    </div>
+  </div>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="error-content">
+  <h1>404</h1>
+  <p>This page doesn't exist.</p>
+  <a href="index.html">&larr; Back to home</a>
+</div>
+
+<script type="module">
+  import { initDecorativeBlobs } from './js/decorative-blobs.js';
+  initDecorativeBlobs(document.getElementById('bg-canvas'), {
+    colors: ['#1a1a1a', '#3a3a3a', '#5a5a5a', '#2a2a2a', '#4a4a4a'],
+    count: 5,
+  });
+</script>
+</body>
+</html>
