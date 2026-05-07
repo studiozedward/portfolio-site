@@ -58,25 +58,44 @@
   </div>
 
   <h1>Privacy Policy</h1>
-  <p class="last-updated">Last updated: [DATE]</p>
+  <p class="last-updated">Last updated: 5 May, 2026</p>
 
   <div class="body-text">
     <p>This privacy policy describes how Meowify (the "Service") handles user data.</p>
 
-    <h2>Data we collect</h2>
-    <p>[ Replace with actual policy text — describe what data Meowify reads, stores, or transmits. ]</p>
+    <h2>How Meowify works</h2>
+    <p>All encoding and decoding happens locally in your browser using a content script. The extension:
 
-    <h2>How data is used</h2>
-    <p>[ Describe how the data is processed and what purposes it serves. ]</p>
+    <p>- Reads text that you explicitly highlight on a webpage</p>
+    <p>- Encodes or decodes that text on your device</p>
+    <p>- Optionally writes the result back to the field you highlighted it from</p>
+    <p>No text you highlight, encode, or decode is ever sent to any server. The actual content of your messages is never transmitted.</p>
 
-    <h2>Data storage</h2>
-    <p>[ Describe whether data is stored locally only, transmitted to any server, or shared with third parties. ]</p>
+    <h2>Community counters</h2>
+    <p>Meowify displays three community counters: total meowifiers, total meows generated, and total words meowed. To power these:
+
+    <p>- When you encode text, the number of output words and the number of input words are sent to a server. Only the counts (single integers) are sent — never the text itself, never the original message, and never any page content.</p>
+    <p>- A flag is stored locally to track whether you have been counted. Only a one-time boolean ("new user: yes/no") is sent to the server — your anonymous ID never leaves your device.</p>
+    <p>- Counter data is sent in batches (at most once every 10 minutes) to minimise network activity.</p>
+    <p>- If the counter service is unavailable, the extension works exactly as before — encoding and decoding happen locally regardless.</p>
+
+    <h2>Announcements</h2>
+    <p>The modal may display short announcements (e.g. new features, tips). These are fetched from our server and contain only text and links written by the extension developer. No user data is sent when fetching announcements.</p>
+
+    <h2>Server requests and IP addresses</h2>
+    <p>When counter data or announcements are exchanged with our server, your IP address is received as part of the standard web request. IP addresses are not stored, logged long-term, or linked to your usage data. We do not use IP addresses to identify or track individual users.</p>
 
     <h2>Third-party services</h2>
-    <p>[ List any third-party services the app communicates with. ]</p>
+    <p>Google Firebase - Used to store aggregated data about usage statistics (see: Community Counters).</p>
 
-    <h2>Your rights</h2>
-    <p>[ Describe how users can access, modify, or delete their data. ]</p>
+    <h2>Permissions</h2>
+    <p>clipboardWrite - To copy encoded/decoded text to your clipboard when you click Copy</p>
+    <p>host_permissions: <all_urls> - To run on any webpage so you can Meowify text wherever you are</p>
+    <p>storage - To store your anonymous user ID and pending counter data locally</p>
+    <p>alarms - To schedule batched counter reporting (at most once every 10 minutes)</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Meowify is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child under 13 has provided personal data through the extension, please contact us so we can take appropriate action.</p>
 
     <h2>Contact</h2>
     <p>For questions about this policy, please get in touch via the <a href="contact.html">Contact</a> page.</p>
