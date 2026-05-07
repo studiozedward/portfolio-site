@@ -27,7 +27,7 @@ canvas {
 
 #tagline {
   position: fixed;
-  top: calc(50% + clamp(32px, 5vw, 72px));
+  bottom: calc(25% + clamp(32px, 5vw, 72px));
   left: 50%;
   transform: translateX(-50%);
   font-family: 'DM Mono', monospace;
