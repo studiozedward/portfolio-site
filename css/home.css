@@ -15,7 +15,8 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(48px, 8vw, 120px);
+  font-size: clamp(20px, 8vw, 120px);
+  white-space: nowrap;
   letter-spacing: 0.08em;
   color: #1a1a1a;
   pointer-events: none;
@@ -27,9 +28,9 @@ canvas {
 
 #tagline {
   position: fixed;
-  top: calc(50% + clamp(10px, 5vw, 72px));
+  top: 75%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   font-family: 'DM Mono', monospace;
   font-size: 10px;
   letter-spacing: 0.15em;
@@ -63,8 +64,8 @@ canvas {
 #hint {
   position: fixed;
   bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 28px;
+  max-width: calc(100% - 190px);
   font-family: 'DM Mono', monospace;
   font-size: 9px;
   letter-spacing: 0.15em;
@@ -73,7 +74,6 @@ canvas {
   pointer-events: none;
   z-index: 10;
   text-transform: uppercase;
-  text-align: center;
 }
 
 #panel-toggle {
