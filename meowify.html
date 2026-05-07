@@ -69,7 +69,22 @@
   <h1>Meowify</h1>
   <p class="subtitle">Application · 2026</p>
 
-  <div class="hero-image" style="background: #D94F3D;">[ project image ]</div>
+  <div class="carousel" role="region" aria-label="Meowify screenshots">
+    <div class="carousel-track">
+      <img src="images/meowify/meowify1.png" alt="Meowify screenshot 1">
+      <img src="images/meowify/meowify2.png" alt="Meowify screenshot 2">
+      <img src="images/meowify/meowify3.png" alt="Meowify screenshot 3">
+      <img src="images/meowify/meowify4.png" alt="Meowify screenshot 4">
+    </div>
+    <button class="carousel-btn prev" aria-label="Previous slide">&#8592;</button>
+    <button class="carousel-btn next" aria-label="Next slide">&#8594;</button>
+    <div class="carousel-dots">
+      <button class="carousel-dot active" aria-label="Slide 1"></button>
+      <button class="carousel-dot" aria-label="Slide 2"></button>
+      <button class="carousel-dot" aria-label="Slide 3"></button>
+      <button class="carousel-dot" aria-label="Slide 4"></button>
+    </div>
+  </div>
 
   <div class="body-text">
     <p>Meowify is a community engagement platform built as a Google Chrome Extension. It enables users to encode any UNICODE text into cat language and decode it back to the original text. While functionally useless, it gives cat-lovers the ability to communicate with each other in a fun and unique way.</p>
@@ -103,6 +118,26 @@
   initDecorativeBlobs(document.getElementById('bg-canvas'), {
     colors: ['#E86A5C', '#D94F3D', '#A83729', '#C44131', '#B83C2D'],
     count: 5,
+  });
+
+  const track = document.querySelector('.carousel-track');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const total = dots.length;
+  let current = 0;
+
+  function goTo(n) {
+    current = (n + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  document.querySelector('.carousel-btn.prev').addEventListener('click', () => goTo(current - 1));
+  document.querySelector('.carousel-btn.next').addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
   });
 </script>
 </body>
