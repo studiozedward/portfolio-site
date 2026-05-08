@@ -69,16 +69,35 @@
   <h1>Commbini</h1>
   <p class="subtitle">Strategic communications tool · 2026</p>
 
-  <div class="hero-image" style="background: #A83729;">[ project image ]</div>
+  <div class="carousel" role="region" aria-label="Commbini screenshots">
+    <div class="carousel-track">
+      <img src="images/commbini/commbini1.png" alt="Commbini screenshot 1">
+      <img src="images/commbini/commbini2.png" alt="Commbini screenshot 2">
+      <img src="images/commbini/commbini3.png" alt="Commbini screenshot 3">
+      <img src="images/commbini/commbini4.png" alt="Commbini screenshot 4">
+    </div>
+    <button class="carousel-btn prev" aria-label="Previous slide">&#8592;</button>
+    <button class="carousel-btn next" aria-label="Next slide">&#8594;</button>
+    <div class="carousel-dots">
+      <button class="carousel-dot active" aria-label="Slide 1"></button>
+      <button class="carousel-dot" aria-label="Slide 2"></button>
+      <button class="carousel-dot" aria-label="Slide 3"></button>
+      <button class="carousel-dot" aria-label="Slide 4"></button>
+    </div>
+  </div>
 
   <div class="body-text">
-    <p>[ Placeholder body text. Replace with your Commbini project description — AI-powered strategic communications campaign planning, OASIS methodology, etc. ]</p>
+    <p>Commbini is an AI-powered strategic communications planning platform built around the OASIS framework — a structured methodology covering Objectives, Audience, Strategy, Implementation, and Scoring. It is designed for communications professionals who need to move from a brief to a fully-formed campaign plan without losing strategic rigour.</p>
 
-    <h2>How it works</h2>
-    <p>[ placeholder ]</p>
+    <p>The platform combines a curated knowledge base of communications research, case studies, and market intelligence with Claude to generate context-grounded outputs at each stage of the planning process.</p>
+
+    <h2>Tools</h2>
+    <p>- <strong>Brief Analyser</strong> — Reviews campaign briefs across all OASIS dimensions, scores quality, identifies gaps, and generates stakeholder summaries including email briefs and meeting notes</p>
+    <p>- <strong>OASIS Planner</strong> — Builds a complete campaign plan through six guided stages with knowledge-base context, coherence review, and iterative refinement; exports as a formatted document</p>
+    <p>- <strong>Implementation Planner</strong> — Converts an OASIS plan into a detailed workstream structure with task assignments, dependencies, and timing; generates a downloadable Gantt chart</p>
 
     <h2>Access</h2>
-    <p>[ placeholder for beta signup, self-hosting info, etc. ]</p>
+    <p>Commbini is currently in private access. <a href="contact.html">Get in touch</a> to request an invite.</p>
   </div>
 </main>
 
@@ -97,6 +116,26 @@
   initDecorativeBlobs(document.getElementById('bg-canvas'), {
     colors: ['#E86A5C', '#D94F3D', '#A83729', '#C44131', '#B83C2D'],
     count: 5,
+  });
+
+  const track = document.querySelector('.carousel-track');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const total = dots.length;
+  let current = 0;
+
+  function goTo(n) {
+    current = (n + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  document.querySelector('.carousel-btn.prev').addEventListener('click', () => goTo(current - 1));
+  document.querySelector('.carousel-btn.next').addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
   });
 </script>
 </body>

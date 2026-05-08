@@ -58,25 +58,30 @@
   </div>
 
   <h1>Privacy Policy</h1>
-  <p class="last-updated">Last updated: [DATE]</p>
+  <p class="last-updated">Last updated: May 2026</p>
 
   <div class="body-text">
-    <p>This privacy policy describes how Commbini (the "Service") handles user data.</p>
+    <p>This privacy policy describes how Commbini (the "Service") handles data when you create an account and use the platform.</p>
 
-    <h2>Data we collect</h2>
-    <p>[ Replace with actual policy text — describe what data Commbini reads, stores, or transmits. ]</p>
+    <h2>What data we collect</h2>
+    <p>- <strong>Account data:</strong> your email address and name, collected via Clerk when you sign up or sign in</p>
+    <p>- <strong>Content data:</strong> campaign briefs, OASIS plans, and implementation workstreams you create within the Service</p>
+    <p>- <strong>Usage data:</strong> generation counts per account, used to enforce rate limits</p>
 
     <h2>How data is used</h2>
-    <p>[ Describe how the data is processed and what purposes it serves. ]</p>
+    <p>Account data is used to authenticate you and manage your access. Content you submit to the Brief Analyser, OASIS Planner, and Implementation Planner is sent to Anthropic's API for AI processing and returned to you. We do not use your content to train models or share it with other users.</p>
 
     <h2>Data storage</h2>
-    <p>[ Describe whether data is stored locally only, transmitted to any server, or shared with third parties. ]</p>
+    <p>Account data and usage records are stored in a PostgreSQL database hosted on Railway. Content is not persisted server-side beyond what is necessary to complete a generation request — outputs are returned to your browser session only.</p>
 
     <h2>Third-party services</h2>
-    <p>[ List any third-party services the app communicates with. ]</p>
+    <p>- <strong>Clerk</strong> — handles authentication and identity management</p>
+    <p>- <strong>Anthropic</strong> — processes content you submit through the AI planning tools</p>
+    <p>- <strong>Railway</strong> — hosts the backend API and database</p>
+    <p>- <strong>Vercel</strong> — hosts the frontend application</p>
 
     <h2>Your rights</h2>
-    <p>[ Describe how users can access, modify, or delete their data. ]</p>
+    <p>You may request deletion of your account and any associated data at any time by contacting us via the <a href="contact.html">Contact</a> page. We will action deletion requests within 30 days.</p>
 
     <h2>Contact</h2>
     <p>For questions about this policy, please get in touch via the <a href="contact.html">Contact</a> page.</p>
