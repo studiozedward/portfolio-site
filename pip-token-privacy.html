@@ -58,25 +58,29 @@
   </div>
 
   <h1>Privacy Policy</h1>
-  <p class="last-updated">Last updated: [DATE]</p>
+  <p class="last-updated">Last updated: May 2026</p>
 
   <div class="body-text">
-    <p>This privacy policy describes how Pip-Token (the "Extension") handles user data when installed in Visual Studio Code.</p>
+    <p>This privacy policy describes how Pip-Token (the "Extension") handles data when installed in Visual Studio Code.</p>
 
-    <h2>Data we collect</h2>
-    <p>[ Replace with actual policy text — describe what data the extension reads, stores, or transmits. For Pip-Token specifically, this likely covers token usage data, session timestamps, and any settings stored locally. ]</p>
+    <h2>What data the extension reads</h2>
+    <p>Pip-Token reads Claude Code's local session log files stored on your machine at <code>~/.claude/projects/</code>. These files are written by Claude Code and contain token counts and timestamps for each turn in your sessions. Pip-Token does not read the content of your prompts or responses — only the numeric token metadata.</p>
 
-    <h2>How data is used</h2>
-    <p>[ Describe how the data is processed and what purposes it serves. ]</p>
+    <h2>What data the extension stores</h2>
+    <p>Pip-Token stores a SQLite database in VS Code's per-extension storage directory (typically <code>~/.vscode/extensions/globalStorage/studiozedward.pip-token/pip-token.db</code>). This database contains:</p>
+    <p>- Accumulated token counts (input, output, peak, off-peak) per session and per day</p>
+    <p>- Limit hit events logged manually or detected automatically</p>
+    <p>- Dashboard sync records entered manually by the user</p>
+    <p>- User settings: plan tier, currency, and timezone preference</p>
 
-    <h2>Data storage</h2>
-    <p>[ Describe whether data is stored locally only, transmitted to any server, or shared with third parties. ]</p>
+    <h2>Network calls</h2>
+    <p>Pip-Token makes no network calls of any kind. There is no telemetry, no remote update check, no analytics, and no server communication. All data stays on your machine. This is an architectural commitment, not a configuration option — the extension declares no network permissions.</p>
 
     <h2>Third-party services</h2>
-    <p>[ List any third-party services the extension communicates with — e.g. the Claude API, telemetry providers. ]</p>
+    <p>None. Pip-Token does not communicate with Anthropic, any cloud service, or any third party.</p>
 
-    <h2>Your rights</h2>
-    <p>[ Describe how users can access, modify, or delete their data, and how they can uninstall the extension. ]</p>
+    <h2>Deleting your data</h2>
+    <p>You can clear all stored data at any time using the <strong>CLEAR ALL DATA</strong> button on the About page within the extension. Alternatively, delete the <code>pip-token.db</code> file from VS Code's globalStorage directory. Uninstalling the extension via VS Code's Extensions panel will also remove all associated storage.</p>
 
     <h2>Contact</h2>
     <p>For questions about this policy, please get in touch via the <a href="contact.html">Contact</a> page.</p>

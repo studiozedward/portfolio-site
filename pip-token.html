@@ -70,7 +70,22 @@
   <h1>Pip-Token</h1>
   <p class="subtitle">VS Code extension · 2026</p>
 
-  <div class="hero-image" style="background: #E86A5C;">[ project image ]</div>
+  <div class="carousel" role="region" aria-label="Pip-Token screenshots">
+    <div class="carousel-track">
+      <img src="images/pip-token/pip-token1.png" alt="Pip-Token screenshot 1">
+      <img src="images/pip-token/pip-token2.png" alt="Pip-Token screenshot 2">
+      <img src="images/pip-token/pip-token3.png" alt="Pip-Token screenshot 3">
+      <img src="images/pip-token/pip-token4.png" alt="Pip-Token screenshot 4">
+    </div>
+    <button class="carousel-btn prev" aria-label="Previous slide">&#8592;</button>
+    <button class="carousel-btn next" aria-label="Next slide">&#8594;</button>
+    <div class="carousel-dots">
+      <button class="carousel-dot active" aria-label="Slide 1"></button>
+      <button class="carousel-dot" aria-label="Slide 2"></button>
+      <button class="carousel-dot" aria-label="Slide 3"></button>
+      <button class="carousel-dot" aria-label="Slide 4"></button>
+    </div>
+  </div>
 
   <div class="body-text">
     <p>Pip-Token is a free, open-source VS Code extension that tracks Claude Code token usage in real time, dressed in a Pip-Boy aesthetic borrowed from the Fallout series. The status bar displays your current session's token spend, daily totals, and rate-limit headroom — without leaving your editor.</p>
@@ -78,10 +93,19 @@
     <p>Built for developers who live inside Claude Code and want a glanceable view of their usage without context-switching to a dashboard.</p>
 
     <h2>Features</h2>
-    <p>[ placeholder for feature list ]</p>
+    <p>- Real-time session view: input/output splits, peak/off-peak counters, burn rate, and time-to-limit estimates</p>
+    <p>- Context window tracker showing how much of Claude's working memory is in use</p>
+    <p>- Cache hygiene monitor that warns before your prompt cache expires and shows how much it has saved</p>
+    <p>- Interactive chart tooltips with peak/off-peak/limit hit breakdown on hover</p>
+    <p>- Personalised limit thresholds learned from your own usage history</p>
+    <p>- Cost estimates in your local currency, calculated from API list pricing</p>
+    <p>- Contextual advisories that surface based on your current data</p>
+    <p>- Status bar pinned to every page showing peak status, context fill, burn rate, and week-to-date cost</p>
+    <p>- CRT flicker transitions and blip sound effects</p>
+    <p>- Onboarding flow to configure plan tier, currency, and timezone</p>
 
     <h2>Installation</h2>
-    <p>Available on the <a href="#">VS Code Marketplace</a>. Search for "Pip-Token" or install via the command palette.</p>
+    <p>Available on the <a href="https://marketplace.visualstudio.com/items?itemName=StudioZedward.pip-token" target="_blank" rel="noopener noreferrer">VS Code Marketplace</a>. Search for "Pip-Token" or install via the command palette.</p>
   </div>
 </main>
 
@@ -100,6 +124,26 @@
   initDecorativeBlobs(document.getElementById('bg-canvas'), {
     colors: ['#E86A5C', '#D94F3D', '#A83729', '#C44131', '#B83C2D'],
     count: 5,
+  });
+
+  const track = document.querySelector('.carousel-track');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const total = dots.length;
+  let current = 0;
+
+  function goTo(n) {
+    current = (n + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  document.querySelector('.carousel-btn.prev').addEventListener('click', () => goTo(current - 1));
+  document.querySelector('.carousel-btn.next').addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
   });
 </script>
 </body>
